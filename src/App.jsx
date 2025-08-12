@@ -86,7 +86,10 @@ const App = () => {
             <Form.Item
               label="Nueva contraseña"
               name="newPassword"
-              rules={[{ required: true, message: 'Por favor ingresa una nueva contraseña' }]}
+              rules={[
+                { required: true, message: 'Por favor ingresa una nueva contraseña' },
+                { min: 6, message: 'La contraseña debe tener al menos 6 caracteres' }
+              ]}
             >
               <Input.Password />
             </Form.Item>
@@ -94,7 +97,10 @@ const App = () => {
             <Form.Item
               label="Confirmar contraseña"
               name="confirmPassword"
-              rules={[{ required: true, message: 'Por favor confirma tu nueva contraseña' }]}
+              rules={[
+                { required: true, message: 'Por favor confirma tu nueva contraseña' },
+                { min: 6, message: 'La contraseña debe tener al menos 6 caracteres' }
+              ]}
             >
               <Input.Password />
             </Form.Item>
